@@ -1,10 +1,11 @@
 import React from 'react';
+import logo2 from '../images/logo2.png'
 
 const Footer = () => {
     return (
         <>
             <footer>
-                <img src='' alt=''></img>
+                <img src={logo2} alt='Logo Kasa'></img>
                 <p>© 2020 Kasa. All right reserved</p>
             </footer>
         </>
