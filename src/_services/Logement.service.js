@@ -1,6 +1,6 @@
 let getAllLogements = async () => {
     try {
-        const res = await fetch('https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json'
+        const res = await fetch('./logements.json'
             , {
                 method: 'GET',
                 headers: {
@@ -9,10 +9,7 @@ let getAllLogements = async () => {
                 }
             }
         )
-
-        console.log(res)
         const data = await res.json()
-        console.log(data)
         return data
     }
     catch (error) {
@@ -21,10 +18,13 @@ let getAllLogements = async () => {
 
 }
 
-let getOneLogement = async (logementid) => {
+let getOneLogement = async (logementId) => {
     try {
-        const data = await fetch.get('../data/logements.json')
-        return data
+        const data = await getAllLogements()
+        console.log('data', data)
+        const logement = await data.find((aLogement) => aLogement.id === logementId)
+        console.log('logement', logement)
+        return logement
     }
     catch (error) {
         console.log(error)
