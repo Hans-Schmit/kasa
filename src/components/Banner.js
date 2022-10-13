@@ -12,15 +12,18 @@ const Banner = () => {
     const flagBanner = useRef(false)
 
     useEffect(() => {
-        if (isAPropos()) {
-            setBanner(banner2)
-            setAltTxt('Mountains and trees landscape')
+        if (flagBanner.current === false) {
+            if (isAPropos()) {
+                setBanner(banner2)
+                setAltTxt('Mountains and trees landscape')
+            }
+            else {
+                setBanner(banner1)
+                setAltTxt('Coast and trees landscape')
+                setParagraph(<p>Chez vous, partout et ailleurs</p>)
+            }
         }
-        else {
-            setBanner(banner1)
-            setAltTxt('Coast and trees landscape')
-            setParagraph(<p>Chez vous, partout et ailleurs</p>)
-        }
+
         return () => flagBanner.current = true
     }, [])
 
