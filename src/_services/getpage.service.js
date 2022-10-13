@@ -1,4 +1,4 @@
-const isHome = () => window.location.href.includes('a-propos')
+const isAPropos = () => window.location.href.includes('a-propos')
 
 
-export default isHome
+export default isAPropos
