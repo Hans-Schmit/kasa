@@ -6,7 +6,7 @@ const Card = ({ logement }) => {
 
     return (
         <div className='card'>
-            <Link to={`./fiche-logement/${logement.id}`}>
+            <Link to={`/fiche-logement?id=${logement.id}`}>
                 <img src={logement.cover} alt={logement.title}></img>
                 <p>{logement.title}</p>
             </Link>
