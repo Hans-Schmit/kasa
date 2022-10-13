@@ -1,27 +1,34 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import banner1 from '../images/banner1.png'
 import banner2 from '../images/banner2.png'
-import isHome from '../_services/getpage.service'
+import isAPropos from '../_services/getpage.service'
 
-let banner = ''
-let altTxt = ''
-console.log(isHome())
-
-if (isHome()) {
-    banner = banner2
-    altTxt = 'Mountains and trees landscape'
-}
-else {
-    banner = banner1
-    altTxt = 'Coast and trees landscape'
-}
-
-// window.location.reload() solution ?
 
 const Banner = () => {
+
+    const [banner, setBanner] = useState([])
+    const [altTxt, setAltTxt] = useState([])
+    const [paragraph, setParagraph] = useState([])
+    const flagBanner = useRef(false)
+
+    useEffect(() => {
+        if (isAPropos()) {
+            setBanner(banner2)
+            setAltTxt('Mountains and trees landscape')
+        }
+        else {
+            setBanner(banner1)
+            setAltTxt('Coast and trees landscape')
+            setParagraph(<p>Chez vous, partout et ailleurs</p>)
+        }
+        return () => flagBanner.current = true
+    }, [])
+
+
     return (
-        <div>
+        <div className='banner'>
             <img src={banner} alt={altTxt} />
+            {paragraph}
         </div>
     );
 };
