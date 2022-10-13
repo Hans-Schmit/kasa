@@ -3,9 +3,9 @@ import Banner from '../components/Banner'
 
 const APropos = () => {
     return (
-        <div>
+        <>
             <Banner />
-        </div>
+        </>
     );
 };
 
