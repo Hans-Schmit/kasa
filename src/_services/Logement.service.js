@@ -21,9 +21,7 @@ let getAllLogements = async () => {
 let getOneLogement = async (logementId) => {
     try {
         const data = await getAllLogements()
-        console.log('data', data)
         const logement = await data.find((aLogement) => aLogement.id === logementId)
-        console.log('logement', logement)
         return logement
     }
     catch (error) {
