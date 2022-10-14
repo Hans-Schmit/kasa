@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Arrow from '../images/arrow.png'
+import ArrowDown from '../images/arrowdown.png'
+import ArrowUp from '../images/arrowup.png'
 
 const Collaps = ({ data }) => {
 
@@ -9,10 +10,7 @@ const Collaps = ({ data }) => {
         <div className='collaps'>
             <div className='collaps_title' onClick={() => setIsActive(!isActive)} style={{ backgroundColor: "#EE8888", color: "#FFFFFF" }}>
                 {data.title}
-                {isActive ?
-                    <img src={Arrow} alt='' ></img> :
-                    <img src={Arrow} alt='' style={{ transform: "rotate(180deg)" }}></img>
-                }
+                {isActive ? <img src={ArrowDown} alt='arrow down' ></img> : <img src={ArrowUp} alt='arrow up' ></img>}
             </div>
 
             {isActive &&
