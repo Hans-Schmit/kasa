@@ -1,6 +1,6 @@
 import React from 'react';
-import Redstar from '../images/redstar.png'
-import Whitestar from '../images/whitestar.png'
+import Redstar from '../images/red_star.png'
+import Whitestar from '../images/white_star.png'
 
 const Rating = (rate) => {
 

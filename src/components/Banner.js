@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import banner1 from '../images/banner1.png'
-import banner2 from '../images/banner2.png'
+import banner1 from '../images/banner_1.png'
+import banner2 from '../images/banner_2.png'
 import isAPropos from '../_services/getpage.service'
 
 

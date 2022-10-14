@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import ArrowDown from '../images/arrowdown.png'
-import ArrowUp from '../images/arrowup.png'
+import ArrowDown from '../images/arrow_down.png'
+import ArrowUp from '../images/arrow_up.png'
 
 const Collaps = ({ data }) => {
 
