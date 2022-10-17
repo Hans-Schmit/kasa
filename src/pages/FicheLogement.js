@@ -40,7 +40,6 @@ const FicheLogement = () => {
     }, [])
 
     if (logement === undefined) {
-        console.log('ok')
         return <Navigate to="/error-404" replace={true} />
     }
 
@@ -49,7 +48,7 @@ const FicheLogement = () => {
 
         <>
             <Carousel data={logement.pictures} />
-            <p>{logement.title}</p>
+            <h1>{logement.title}</h1>
             <p>{logement.location}</p>
             <div className='tagsContainer'>
                 {
