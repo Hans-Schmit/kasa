@@ -15,11 +15,15 @@ const Collaps = ({ data }) => {
 
             {isActive &&
                 <div className='collaps_content' style={{ backgroundColor: "#DEDEDE", color: "#EE8888" }}>
-                    {data.text}
+                    {(data.title === "Équipements" ?
+                        <ul>
+                            {data.text.map(equipment => (
+                                <li key={equipment}>{equipment}</li>
+                            ))}
+                        </ul>
+                        : <p>{data.text}</p>)}
                 </div>
             }
-
-
         </div>
     );
 };
