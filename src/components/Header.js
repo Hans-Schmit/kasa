@@ -4,17 +4,15 @@ import logo1 from '../images/logo_1.png'
 
 const Header = () => {
     return (
-        <>
-            <header>
-                <img src={logo1} alt='Logo Kasa' />
-                <nav>
-                    <ul>
-                        <li><Link to='/home'>Accueil</Link></li>
-                        <li><Link to='/a-propos'>A Propos</Link></li>
-                    </ul>
-                </nav>
-            </header>
-        </>
+        <header>
+            <img src={logo1} alt='Logo Kasa' />
+            <nav>
+                <ul>
+                    <li><Link to='/home'>Accueil</Link></li>
+                    <li><Link to='/a-propos'>A Propos</Link></li>
+                </ul>
+            </nav>
+        </header>
     );
 };
 
