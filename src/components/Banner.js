@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import styles from './banner.module.css'
 import banner1 from '../images/banner_1.png'
 import banner2 from '../images/banner_2.png'
 import isAPropos from '../_services/getpage.service'
@@ -20,7 +21,7 @@ const Banner = () => {
             else {
                 setBanner(banner1)
                 setAltTxt('Coast and trees landscape')
-                setParagraph(<p>Chez vous, partout et ailleurs</p>)
+                setParagraph(<p className={styles.text}> Chez vous, partout et ailleurs</ p >)
             }
         }
 
@@ -29,8 +30,8 @@ const Banner = () => {
 
 
     return (
-        <div className='banner'>
-            <img src={banner} alt={altTxt} />
+        <div className={styles.banner}>
+            <img src={banner} alt={altTxt} className={styles.image} />
             {paragraph}
         </div>
     );
