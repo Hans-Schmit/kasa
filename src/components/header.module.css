@@ -38,6 +38,15 @@
         width: 1240px;
     }
 
+    .logo {
+        margin-left: 0px;
+
+    }
+
+    .nav {
+        margin-right: 0px;
+    }
+
 }
 
 @media screen and (max-width:775px) {
