@@ -29,7 +29,7 @@
 }
 
 .linkActive {
-    compose: link;
+    composes: link;
     text-decoration: underline;
 }
 
