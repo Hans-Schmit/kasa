@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './carousel.module.css'
 import ArrowBack from '../images/arrow_back.png'
 import ArrowForward from '../images/arrow_forward.png'
 
@@ -17,15 +18,15 @@ const Carousel = (pictures) => {
     }
 
     return (
-        <div className='carrousel'>
+        <div className={styles.carousel}>
 
-            <img src={pictures.data[imgNum]} alt={`Vue n° ${imgNum + 1}`} />
+            <img src={pictures.data[imgNum]} alt={`Vue n° ${imgNum + 1}`} className={styles.image} />
 
             {(pictures.data.length > 1) &&
                 <>
-                    <button id='backButton' onClick={() => changeImg(-1)}><img src={ArrowBack} alt='flèche gauche' /></button>
-                    <span id="imgCounter">{imgNum + 1}/{pictures.data.length}</span>
-                    <button id='forwardButton' onClick={() => changeImg(1)}><img src={ArrowForward} alt='flèche droite' /></button>
+                    <button onClick={() => changeImg(-1)} className={styles.buttonLeft}><img src={ArrowBack} alt='flèche gauche' className={styles.arrow} /></button>
+                    <span className={styles.count}>{imgNum + 1}/{pictures.data.length}</span>
+                    <button onClick={() => changeImg(1)} className={styles.buttonRight}><img src={ArrowForward} alt='flèche droite' className={styles.arrow} /></button>
                 </>
             }
         </div>
