@@ -7,34 +7,33 @@ import isAPropos from '../_services/getpage.service'
 
 const Banner = () => {
 
-    const [banner, setBanner] = useState([])
-    const [altTxt, setAltTxt] = useState([])
-    const [paragraph, setParagraph] = useState([])
+    const [content, setContent] = useState([])
+
     const flagBanner = useRef(false)
 
     useEffect(() => {
         if (flagBanner.current === false) {
             if (isAPropos()) {
-                setBanner(banner2)
-                setAltTxt('Mountains and trees landscape')
+                setContent(
+                    <div className={styles.bannerAPropos}>
+                        <img src={banner2} alt='Mountains and trees landscape' className={styles.image} />
+                    </div>
+                )
             }
             else {
-                setBanner(banner1)
-                setAltTxt('Coast and trees landscape')
-                setParagraph(<p className={styles.text}> Chez vous, partout et ailleurs</ p >)
+                setContent(
+                    <div className={styles.banner}>
+                        <img src={banner1} alt='Coast and trees landscape' className={styles.image} />
+                        <p className={styles.text}> Chez vous, partout et ailleurs</ p >
+                    </div>
+                )
             }
         }
 
         return () => flagBanner.current = true
     }, [])
 
-
-    return (
-        <div className={styles.banner}>
-            <img src={banner} alt={altTxt} className={styles.image} />
-            {paragraph}
-        </div>
-    );
+    return content
 };
 
 export default Banner;
