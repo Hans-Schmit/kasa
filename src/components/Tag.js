@@ -1,10 +1,11 @@
 import React from 'react';
+import styles from './tag.module.css'
 
 const Tag = (tag) => {
     return (
-        <div className='tag'>
+        <p className={styles.tag}>
             {tag.data}
-        </div>
+        </p>
     );
 };
 
