@@ -1,0 +1,45 @@
+.collaps {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FF6060;
+}
+
+.h2 {
+    color: #FFFFFF;
+}
+
+.arrow {
+    width: 32px;
+    height: 32px;
+}
+
+.content {
+    background-color: #F6F6F6;
+}
+
+.ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px 0px 0px 20px;
+}
+
+.li {
+    color: #FF6060;
+}
+
+.text {
+    color: #FF6060;
+}
+
+@media screen and (max-width: 775px) {
+    .arrow {
+        width: 19px;
+        height: 19px;
+    }
+}
