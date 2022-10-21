@@ -4,20 +4,19 @@
     display: flex;
     justify-content: space-between;
     margin: 40px 0px 63px 0px;
+    padding: 0px 20px 0px 20px;
 }
 
 .logo {
     width: 210px;
     height: 68px;
     display: flex;
-    margin-left: 20px;
 
 }
 
 .nav {
     display: flex;
     color: #FF6060;
-    margin-right: 20px;
 }
 
 .link {
@@ -36,17 +35,8 @@
 @media screen and (min-width:1240px) {
     .header {
         width: 1240px;
+        padding: 0px;
     }
-
-    .logo {
-        margin-left: 0px;
-
-    }
-
-    .nav {
-        margin-right: 0px;
-    }
-
 }
 
 @media screen and (max-width:775px) {
