@@ -1,0 +1,35 @@
+.host {
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: right;
+    color: #FF6060;
+    margin: 0px;
+}
+
+.image {
+    width: 64px;
+    height: 64px;
+    border-radius: 64px;
+    margin-left: 10px;
+}
+
+@media screen and (max-width:775px) {
+
+    .text {
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    .image {
+        width: 32px;
+        height: 32px;
+        border-radius: 32px;
+    }
+}
