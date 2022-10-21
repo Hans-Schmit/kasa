@@ -6,6 +6,7 @@ import Tag from '../components/Tag'
 import Host from '../components/Host'
 import Rating from '../components/Rating'
 import { logementService } from '../_services/Logement.service'
+import styles from './ficheLogement.module.css'
 
 const FicheLogement = () => {
 
@@ -48,19 +49,27 @@ const FicheLogement = () => {
 
         <>
             <Carousel data={logement.pictures} />
-            <h1>{logement.title}</h1>
-            <p>{logement.location}</p>
-            <div className='tagsContainer'>
-                {
-                    logement.tags.map(tag => (
-                        <Tag data={tag} key={tag} />
-                    ))
-                }
+            <div className={styles.box}>
+                <div className={styles.info}>
+                    <h1 className={styles.title}>{logement.title}</h1>
+                    <p className={styles.location}>{logement.location}</p>
+                    <div className={styles.tags}>
+                        {
+                            logement.tags.map(tag => (
+                                <Tag data={tag} key={tag} />
+                            ))
+                        }
+                    </div>
+                </div>
+                <div className={styles.host}>
+                    <Host data={logement.host} />
+                    <Rating data={logement.rating} />
+                </div>
             </div>
-            <Host data={logement.host} />
-            <Rating data={logement.rating} />
-            <Collaps data={{ title: "Description", text: logement.description }} />
-            <Collaps data={{ title: "Équipements", text: logement.equipments }} />
+            <div className={styles.details}>
+                <Collaps data={{ title: "Description", text: logement.description, style: "Logement" }} />
+                <Collaps data={{ title: "Équipements", text: logement.equipments, style: "Logement" }} />
+            </div>
         </>
     );
 };
