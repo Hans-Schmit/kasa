@@ -11,7 +11,7 @@ const Collaps = ({ data }) => {
         <div className={data.style === "Logement" ? styles.collapsLogement : styles.collaps}>
             <div className={data.style === "Logement" ? styles.titleLogement : styles.title} onClick={() => setIsActive(!isActive)} >
                 <h2 className={data.style === "Logement" ? styles.h2Logement : styles.h2}>{data.title}</h2>
-                {isActive ? <img src={ArrowDown} alt='arrow down' className={data.style === "Logement" ? styles.arrowLogement : styles.arrow}></img> : <img src={ArrowUp} alt='arrow up' className={styles.arrow}></img>}
+                <img src={isActive ? ArrowUp : ArrowDown} alt={isActive ? 'Arrow up' : 'Arrow down'} className={data.style === "Logement" ? styles.arrowLogement : styles.arrow} />
             </div>
 
             {isActive &&
