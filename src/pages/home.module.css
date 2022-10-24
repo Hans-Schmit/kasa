@@ -1,0 +1,19 @@
+.container {
+    width: 100%;
+    background: #F7F7F7;
+    border-radius: 25px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 56px 10px 0px 10px;
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width : 775px) {
+    .container {
+        background: #FFFFFF;
+        flex-flow: column nowrap;
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+}
