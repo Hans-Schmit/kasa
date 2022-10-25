@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import styles from './banner.module.css'
 import banner1 from '../images/banner_1.png'
 import banner2 from '../images/banner_2.png'
-import isAPropos from '../_services/getpage.service'
+import { pageService } from '../_services/Page.service.js'
 
 
 const Banner = () => {
@@ -13,7 +13,7 @@ const Banner = () => {
 
     useEffect(() => {
         if (flagBanner.current === false) {
-            if (isAPropos()) {
+            if (pageService.isAPropos()) {
                 setContent(
                     <div className={styles.bannerAPropos}>
                         <img src={banner2} alt='Mountains and trees landscape' className={styles.image} />
