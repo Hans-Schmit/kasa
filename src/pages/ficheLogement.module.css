@@ -52,7 +52,7 @@
     justify-content: space-between;
 }
 
-@media screen and (max-width:775px) {
+@media screen and (max-width:780px) {
     .box {
         margin-bottom: 0px;
     }

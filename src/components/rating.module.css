@@ -10,7 +10,7 @@
     height: 30px;
 }
 
-@media screen and (max-width: 775px) {
+@media screen and (max-width: 780px) {
     .rating {
         width: 98px;
         height: 18px;

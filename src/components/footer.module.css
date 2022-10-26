@@ -20,7 +20,7 @@
     margin: 0px;
 }
 
-@media screen and (max-width: 775px) {
+@media screen and (max-width: 780px) {
     .text {
         font-size: 12px;
         line-height: 17px;

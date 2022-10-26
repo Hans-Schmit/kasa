@@ -9,7 +9,7 @@
     margin-bottom: 25px;
 }
 
-@media screen and (max-width : 775px) {
+@media screen and (max-width : 780px) {
     .container {
         background: #FFFFFF;
         flex-flow: column nowrap;
