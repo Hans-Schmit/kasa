@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './banner.module.css'
-import banner1 from '../images/banner_1.png'
-import banner2 from '../images/banner_2.png'
+import bannerHome from '../images/banner_1.png'
+import bannerAPropos from '../images/banner_2.png'
 import { pageService } from '../_services/Page.service.js'
 
 
@@ -16,14 +16,14 @@ const Banner = () => {
             if (pageService.isAPropos()) {
                 setContent(
                     <div className={styles.bannerAPropos}>
-                        <img src={banner2} alt='Mountains and trees landscape' className={styles.image} />
+                        <img src={bannerAPropos} alt='Mountains and trees landscape' className={styles.image} />
                     </div>
                 )
             }
             else {
                 setContent(
                     <div className={styles.banner}>
-                        <img src={banner1} alt='Coast and trees landscape' className={styles.image} />
+                        <img src={bannerHome} alt='Coast and trees landscape' className={styles.image} />
                         <p className={styles.text}> Chez vous, partout et ailleurs</ p >
                     </div>
                 )
