@@ -1,5 +1,5 @@
-const isAPropos = () => window.location.href.includes('a-propos')
+const isAPropos = () => window.location.href.endsWith('/a-propos')
 
-const isHome = () => window.location.href.includes('home')
+const isHome = () => window.location.href.endsWith('/home')
 
 export const pageService = { isAPropos, isHome }
