@@ -1,6 +1,6 @@
 let getAllLogements = async () => {
     try {
-        const res = await fetch('./logements.json'
+        const res = await fetch(process.env.PUBLIC_URL + '/logements.json'
             , {
                 method: 'GET',
                 headers: {

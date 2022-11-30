@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Navigate } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
 import Carousel from '../components/Carousel'
 import Collaps from '../components/Collaps'
 import Tag from '../components/Tag'
@@ -9,6 +9,8 @@ import { logementService } from '../_services/Logement.service'
 import styles from './ficheLogement.module.css'
 
 const FicheLogement = () => {
+
+    let { id } = useParams()
 
     const [logement, setLogement] = useState({
         "id": "",
@@ -29,8 +31,7 @@ const FicheLogement = () => {
 
     useEffect(() => {
         if (flagLoge.current === false) {
-            let logementId = new URLSearchParams(window.location.search).get("id")
-            logementService.getOneLogement(logementId)
+            logementService.getOneLogement(id)
                 .then(res => {
                     setLogement(res)
                 })
@@ -38,7 +39,7 @@ const FicheLogement = () => {
         }
 
         return () => flagLoge.current = true
-    }, [])
+    }, [id])
 
     if (logement === undefined) {
         return <Navigate to="/error-404" replace={true} />
